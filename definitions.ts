@@ -1,4 +1,4 @@
-const dictionaryColor = "#15bad4";
+const dictionaryColor = "#0048d7";
 
 Blockly.Blocks['dict_constructor'] = {
     init: function() {
@@ -9,7 +9,7 @@ Blockly.Blocks['dict_constructor'] = {
     }
 };
 
-Blockly.Blocks['dict_brackets'] = {
+Blockly.Blocks['dict_item_access'] = {
     init: function() {
         this.appendDummyInput()
             .appendField(new Blockly.FieldVariable("variable_name"), "dict_name")
@@ -23,7 +23,7 @@ Blockly.Blocks['dict_brackets'] = {
     }
 };
 
-Blockly.Blocks['dict_brackets_equals'] = {
+Blockly.Blocks['dict_item_assign'] = {
     init: function() {
         this.appendDummyInput()
             .appendField(new Blockly.FieldVariable("variable_name"), "dict_name")
@@ -31,7 +31,8 @@ Blockly.Blocks['dict_brackets_equals'] = {
         this.appendValueInput("key")
             .setCheck(null);
         this.appendDummyInput()
-            .appendField("] = ");
+            .appendField("]")
+            .appendField(new Blockly.FieldDropdown([["=","="], ["+=","+="], ["-=","-="]]), "op");
         this.appendValueInput("val")
             .setCheck(null);
         this.setInputsInline(true);

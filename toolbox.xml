@@ -3,7 +3,7 @@
 
     <block type="dict_constructor"></block>
 
-    <block type="dict_brackets">
+    <block type="dict_item_access">
         <value name="parameters">
             <shadow type="parameters">
                 <mutation color="#129eb4" items="1" limit="1" inputType="string" />
@@ -16,7 +16,7 @@
         </value>
     </block>
 
-    <block type="dict_brackets_equals">
+    <block type="dict_item_assign">
         <value name="key">
             <shadow type="parameters">
                 <mutation color="#129eb4" items="1" limit="1" inputType="string" />
