@@ -41,3 +41,21 @@ Blockly.Blocks['dict_item_assign'] = {
         this.setColour(dictionaryColor);
     }
 };
+
+Blockly.Blocks['dict_items_loop'] = {
+    init: function() {
+        this.appendDummyInput()
+            .appendField("for")
+            .appendField(new Blockly.FieldVariable("key"), "key")
+            .appendField(",")
+            .appendField(new Blockly.FieldVariable("value"), "value")
+            .appendField("in")
+            .appendField(new Blockly.FieldVariable("variable_name"), "dict_name")
+            .appendField(".items():");
+        this.appendStatementInput("DO")
+            .setCheck(null);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour("#644A9E");
+    }
+}
