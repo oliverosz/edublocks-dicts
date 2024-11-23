@@ -39,5 +39,7 @@
         </value>
     </block>
 
+    <block type="dict_values"></block>
+
     <block type="dict_items_loop"></block>
 </category>

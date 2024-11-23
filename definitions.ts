@@ -59,3 +59,13 @@ Blockly.Blocks['dict_items_loop'] = {
         this.setColour("#644A9E");
     }
 }
+
+Blockly.Blocks['dict_values'] = {
+    init: function() {
+        this.appendDummyInput()
+            .appendField(new Blockly.FieldVariable("variable_name"), "dict_name")
+            .appendField(".values()");
+        this.setOutput(true, null);
+        this.setColour(dictionaryColor);
+    }
+};

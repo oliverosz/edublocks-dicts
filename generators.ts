@@ -27,3 +27,9 @@ Blockly.Python['dict_items_loop'] = function(block) {
     const code = `for ${key}, ${value} in ${dict_name}.items():\n${body}\n`;
     return code;
 };
+
+Blockly.Python['dict_values'] = function(block) {
+    const dict_name = Blockly.Python.nameDB_.getName(block.getFieldValue('dict_name'), Blockly.VARIABLE_CATEGORY_NAME);
+    const code = `${dict_name}.values()`;
+    return [code, 0];
+};
